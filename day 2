@@ -17,3 +17,13 @@ int main() {
    
    printf(" %i  ",true);
 }
+
+
+Exercises.
+#include<stdio.h>
+#define true 1
+int main() {
+   int i;
+   for(i=1;i<=10;i++)
+   printf(" %i  ",i);
+}
