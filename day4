@@ -71,6 +71,7 @@ printf("%d lesser value is",z);
 }
 ----------------------------------------------
 Array of Strings.
+
 #include <stdio.h>
 void main()
 {
@@ -81,7 +82,7 @@ printf("%s",colour[i]);
 }
 ---------------------------------------------------------------------------------
  Writing a program using "ENUM" 
-Sol:
+
 #include<stdio.h>
 enum state {a=2, b=5, c};
 enum state d=7;
@@ -99,7 +100,7 @@ return 0;
 }
 ----------------------------------------------------------------------------------------------------------------------------------------
  Program using array of strings.
-Sol:
+
 void main()
 {
 char color[4][10] = { "Black","Pink","Yellow","Green"};
@@ -110,7 +111,7 @@ printf("%s\n",color[i]);
 }
 ----------------------------------------------------------------------------------------------------------------------------------------
  Using Recursion
-Sol:
+
 #include<stdio.h>
 
 int main()
@@ -133,7 +134,7 @@ int factorial(int j)
 }
 ----------------------------------------------------------------------------------------------------------------------------------------
  Using "conio" function
-Sol:
+
 #include<stdio.h>
 #include<conio.h>
 
@@ -145,7 +146,7 @@ getch();
 }
 ----------------------------------------------------------------------------------------------------------------------------------------
  Struct type function
-Sol:
+
 #include<stdio.h>
 #include<string.h>
 
@@ -175,7 +176,7 @@ return 0;
 }
 ----------------------------------------------------------------------------------------------------------------------------------------
  To find minimum value
-Sol:
+
 #include<stdio.h>
 
 int main()
@@ -201,7 +202,7 @@ return min;
 }
 ----------------------------------------------------------------------------------------------------------------------------------------
  Using argc and argv 
-Sol:
+
 #include<stdio.h>
 #include<conio.h>
 
@@ -221,7 +222,7 @@ clrscr();
 }
 ----------------------------------------------------------------------------------------------------------------------------------------
  Using enum and printing the values
-Sol:
+
 #include<stdio.h>
 
 enum day {sun=1,mon,tues=6,wed,thur,fri=11,sat};
@@ -231,4 +232,68 @@ int main()
 clrscr();
 printf("%d %d %d %d %d %d %d",sun,mon,tues,wed,thur,fri,sat);
 return 0;
+}
+-----------------------------------------------------------------------
+ Using enum and printing the values
+
+#include<stdio.h>
+
+enum day {sun=1,mon,tues=6,wed,thur,fri=11,sat};
+
+int main()
+{
+clrscr();
+printf("%d %d %d %d %d %d %d",sun,mon,tues,wed,thur,fri,sat);
+return 0;
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+ Error handling in files
+
+#include<stdio.h>
+#include<string.h>
+#include<errno.h>
+
+int main()
+{
+FILE *fp;
+clrscr();
+fp = fopen("info.txt","r+");
+
+printf("Value of errno: %d\n",errno);
+printf("The error message:%s\n",strerror(errno));
+perror("Message from perror");
+fclose(fp);
+
+return 0;
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+ To find address of pointer and value of pointer
+
+#include<stdio.h>
+
+void main()
+{
+int i=25,*p,**p2;
+clrscr();
+p=&i;
+p2=&p;
+printf("Address of number variable is %x\n",&i);
+printf("Address of p variable is %x\n",p);
+printf("Value of *p variable is %d\n",*p);
+printf("Address of p2 variable is %x\n",p2);
+printf("Value of **p2 variable is %d\n",*p);
+}
+---------------------------------------------------------------------------------------------------------------------------------------
+ Addition of pointer address
+
+#include<stdio.h>
+
+void main()
+{
+int i=25,*p;
+clrscr();
+p=&i;
+printf("Address of number variable is %u\n",p);
+p=p+5;
+printf("Address of number variable after addition is %u\n",p);
 }
