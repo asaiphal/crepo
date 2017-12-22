@@ -69,3 +69,13 @@ scanf("%d%d",&x,&y);
 z=x<y?x:y;
 printf("%d lesser value is",z);
 }
+----------------------------------------------
+Array of Strings.
+#include <stdio.h>
+void main()
+{
+char colour[4][10] = {"blue","red","yellow","orange"};
+int i=0;
+for(i=0;i<4;i++)
+printf("%s",colour[i]);
+}
